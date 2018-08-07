@@ -1,12 +1,23 @@
 package com.capgemini.ui;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.cg.controller.AppController;
 import com.cg.data.Employee;
 
+//User-Interface of the Employee Management System
 public class AppUI {
-    private AppController control;
-	public  void acceptData()
+    private static AppController control;
+    
+    public void setController( AppController control)
+    {
+    	 this.control= control;
+    }
+	public static void acceptData()
 	{
+		ApplicationContext context=new ClassPathXmlApplicationContext("context.xml");
+		control= (AppController) context.getBean("control");
 		Employee e1=new Employee();
 		Employee e2=new Employee();
 		Employee e3=new Employee();
@@ -29,9 +40,13 @@ public class AppUI {
 	
 	}
 	
-	public void display()
+	public static void display()
 	{
 		System.out.println(control.viewAllEmployee());
 		
+		System.out.println(control.getEmployeeById(2));
+		
+		control.deleteEmployee(1);
+		System.out.println(control.viewAllEmployee());
 	}
 }

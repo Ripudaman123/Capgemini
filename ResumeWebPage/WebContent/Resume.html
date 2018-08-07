@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>RESUME</title>
+</head>
+<body>
+<form action="MyServelet" method="post">
+
+<p>First Name: <input type="text" name="firstName" size="15"></p>
+<p>Last Name: <input type="text" name="lastName" size="15"></p>
+
+<p>Gender <input type="radio" name="gender" value="1" >Male</input>
+        <input type="radio" name="gender" value="2"> Female</input></p>
+
+<p>Date Of Birth: <input type="date" name="dob"/>
+ 
+ <p> Email: <input type="email" name="Email Id"></p>
+        
+<p>Highest Qualification: <select>
+<option name="hq">Btech</option>
+<option name="hq">Bsc</option>
+<option name="hq">Mtech</option>
+<option name="hq">PHD</option>
+</select>      
+
+<p> Hobbies:
+ <select multiple>
+ <option value="cricket" name="hob">Cricket</option>
+ <option value="Football" name="hob">Football</option>
+ <option value="Reading" name="hob">Reading</option>
+ <option value="Driving" name="hob">Driving</option>
+ </select>
+ 
+ 
+ </select>
+ <p> Address: <textarea name="address"></textarea></p>
+ 
+ <p>Skills: 
+ <br> <input type="checkbox" name="Skills" value="1">C</input>
+ <br> <input type="checkbox" name="Skills" value="2">C++</input>
+ <br> <input type="checkbox" name="Skills" value="3">Java</input>
+ <br> <input type="checkbox" name="Skills" value="4">.Net</input>
+ 
+<p>Website <input type="url" name="website">
+
+<p>Contact No: <input type="number" name="contact">
+
+<p>Summary <textarea name="summary"></textarea>
+  
+ <p><input type="reset" value="Clear"> <input type="submit" value="Submit">
+ </p>
+</form>
+
+</body>
+</html>

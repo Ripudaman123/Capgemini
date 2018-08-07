@@ -3,10 +3,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="control" class="com.capgemini.ui.AppUI">
+<bean id="dao" class="com.cg.data.EmployeeDao">
 </bean>
 
-<bean id="renderer" class="com.cg.controller.AppController">
-<property name="messageProvider" ref="control"/>
-
+<bean id="service" class="com.cg.service.EmployeeService">
+<property name="employeeDao" ref="dao"/>
+</bean>
+<bean id="control" class="com.cg.controller.AppController">
+<property name="empServ" ref="service"/>
+</bean>
 </beans>

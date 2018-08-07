@@ -3,6 +3,7 @@ package com.cg.data;
 import java.util.ArrayList;
 import java.util.List;
 
+//Stores the employee details in collection
 public class EmployeeDao {
 
 	List<Employee> employees=new ArrayList<Employee>();

@@ -8,6 +8,11 @@ import com.cg.service.EmployeeService;
 public class AppController {
 
 	private EmployeeService employeeService;
+	
+	public void setEmpServ(EmployeeService employeeService)
+	{
+		this.employeeService=employeeService;
+	}
 	public void addEmployee(Employee emp) {
 		
 		 employeeService.addEmployee(emp);
@@ -16,9 +21,9 @@ public class AppController {
 		
 		 return employeeService.viewAllEmployee();
 	}
-	public void getEmployeeById(int id) {
+	public Employee getEmployeeById(int id) {
 		
-		 employeeService.getEmployeeById(id);
+		return employeeService.getEmployeeById(id);
 	}
 	public void deleteEmployee(int id)
 	{
